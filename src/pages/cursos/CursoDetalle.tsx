@@ -97,6 +97,42 @@ export default function CursoDetalle() {
 					</div>
 				</div>
 				<p className="text-gray-400 mb-6 text-lg">{curso.descripcion}</p>
+				
+				{/* Sección para crear tarea (profesores) */}
+				<div className="mb-8">
+					<label htmlFor="crear-tarea-titulo" className="block text-white font-semibold mb-2">Crear tarea (Profesores)</label>
+					<input
+						type="text"
+						id="crear-tarea-titulo"
+						placeholder="Título de la tarea"
+						className="block w-full px-4 py-2 rounded-lg bg-dark-700 text-white border border-dark-500 focus:outline-none focus:ring-2 focus:ring-primary mb-4"
+					/>
+					<textarea
+						id="crear-tarea-descripcion"
+						placeholder="Descripción de la tarea"
+						className="block w-full px-4 py-2 rounded-lg bg-dark-700 text-white border border-dark-500 focus:outline-none focus:ring-2 focus:ring-primary mb-4"
+						rows={3}
+					/>
+					<input
+						type="file"
+						id="archivo-tarea-profesor"
+						accept=".doc,.docx,.pdf"
+						className="block w-full px-4 py-2 rounded-lg bg-dark-700 text-white border border-dark-500 focus:outline-none focus:ring-2 focus:ring-primary mb-4"
+					/>
+					<button className="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+						Guardar tarea
+					</button>
+				</div>
+
+				{/* Sección para entregar tarea (estudiantes) */}
+				<div className="mb-8">
+					<label htmlFor="tarea" className="block text-white font-semibold mb-2">Entregar tarea (Estudiantes)</label>
+					<input
+						type="file"
+						id="tarea"
+						className="block w-full px-4 py-2 rounded-lg bg-dark-700 text-white border border-dark-500 focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
 			</div>
 			<aside className="w-full md:w-80 bg-dark-800 rounded-xl p-6 shadow-md">
 				<h2 className="text-lg font-bold text-white mb-4">Contenido</h2>
