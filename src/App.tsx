@@ -22,6 +22,10 @@ import Home from "./pages/Dashboard/Home";
 import CursosPage from "./pages/cursos/CursosPage";
 import CursoDetalle from "./pages/cursos/CursoDetalle";
 import CursoDetallesPublicPage from "./pages/cursos/CursoDetallesPublicPage";
+import { TestSupabase } from "./pages/TestSupabase";
+import { ManageEnrollments } from "./pages/admin/ManageEnrollments";
+import { QuickAccess } from "./pages/QuickAccess";
+
 
 export default function App() {
   return (
@@ -59,16 +63,25 @@ export default function App() {
             {/* Cursos Page */}
             <Route path="/cursos" element={<CursosPage />} />
             <Route path="/cursos/:id" element={<CursoDetalle />} />
+
+            {/* Cursos Públicos */}
+            <Route path="/cursos-publicos" element={<CursosPublicos />} />
+            <Route path="/cursos-publicos/:id" element={<CursoDetallesPublicPage />} />
+
+            {/* Admin */}
+            <Route path="/admin/enrollments" element={<ManageEnrollments />} />
+
+            {/* Quick Access */}
+            <Route path="/quick-access" element={<QuickAccess />} />
           </Route>
 
-
-          {/* Público sin menú */}
-          <Route path="/cursos-publicos" element={<CursosPublicos />} />
-          <Route path="/cursos-publicos/:id" element={<CursoDetallesPublicPage />} />
 
           {/* Auth Layout */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+
+          {/* Test Supabase */}
+          <Route path="/test-supabase" element={<TestSupabase />} />
 
           {/* Fallback Route */}
           <Route path="*" element={<NotFound />} />
